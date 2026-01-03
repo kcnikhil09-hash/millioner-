@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millionaire AI | Next-Gen Mining</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --glow: #00f2ff;
+            --bg: #050810;
+            --card: rgba(255, 255, 255, 0.05);
+            --accent: #7000ff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            background: radial-gradient(circle at 50% -20%, #1a1a3a 0%, #050810 100%);
+        }
+
+        /* Animated Background Grid */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        /* AI Header Card */
+        .hero-card {
+            background: var(--card);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 60px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 0 40px rgba(0, 242, 255, 0.1);
+        }
+
+        .ai-badge {
+            background: linear-gradient(90deg, var(--glow), var(--accent));
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 { font-size: 3.5rem; margin: 20px 0; background: linear-gradient(to right, #fff, var(--glow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Interactive Stats Cards */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .feature-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--glow);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.2);
+        }
+
+        .feature-card i {
+            font-size: 2rem;
+            background: linear-gradient(45deg, var(--glow), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        /* Mining Progress Card */
+        .mining-display {
+            background: #000;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--glow);
+        }
+
+        .counter { font-family: 'Courier New', monospace; color: var(--glow); font-size: 1.8rem; font-weight: bold; }
+
+        .btn-ai {
+            background: linear-gradient(90deg, #00f2ff, #7000ff);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(112, 0, 255, 0.4);
+        }
+
+        .btn-ai:hover { letter-spacing: 1px; box-shadow: 0 0 30px var(--glow); }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="hero-card">
+        <span class="ai-badge">Neural Mining V2.0 Active</span>
+        <h1>Millionaire AI Simulator</h1>
+        <p>Harness the power of autonomous economic algorithms. Your 50 RUB AI-Boost is ready.</p>
+
+        <div class="mining-display">
+            <div style="font-size: 0.8rem; color: #888;">LIVE AI GENERATION</div>
+            <div class="counter" id="miningCount">0.00287104</div>
+            <div style="font-size: 0.9rem; color: #00f2ff;">+20% Referral Power Enabled</div>
+        </div>
+
+        <a href="https://millioner-coc.site/?ref=1268" class="btn-ai">ACTIVATE MY AI MINER <i class="fas fa-bolt"></i></a>
+    </div>
+
+    <div class="grid-3">
+        <div class="feature-card">
+            <i class="fas fa-brain"></i>
+            <h3>Autonomous Income</h3>
+            <p>Our AI works 24/7. Even when you're offline, the neural network processes your mining shares.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-network-wired"></i>
+            <h3>Referral Network</h3>
+            <p>Invite friends and unlock 20% of their contribution + a 5% speed bonus. Growth is exponential.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-shield-halved"></i>
+            <h3>Instant Payouts</h3>
+            <p>Withdraw from 10 RUB instantly. Our automated system processes transactions in milliseconds.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simulate live AI mining
+    let count = 0.00287104;
+    setInterval(() => {
+        count += 0.00000089;
+        document.getElementById('miningCount').innerText = count.toFixed(8) + " RUB";
+    }, 1000);
+</script>
+<script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script><script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script><script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script><script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script><script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script>
+</body>
+</html>
