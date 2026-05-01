@@ -199,6 +199,47 @@
     }, 1000);
 </script>
 <script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script><script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script><script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script><script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script><script> atOptions = { 'key' : '8cb245ef0ebb2772db4c32d4f23af1e2', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/8cb245ef0ebb2772db4c32d4f23af1e2/invoke.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Select ALL smartlinks
+    const links = document.querySelectorAll('a[href*="onsetcab.com"]');
+
+    if (!links.length) {
+        console.warn("No smartlinks found.");
+        return;
+    }
+
+    let i = 0;
+    const max = 2000;
+    const delay = 100; // ms
+
+    // ⚠️ SAFETY SWITCH (keep false unless you know what you're doing)
+    const ENABLE_REAL_CLICKS = false;
+
+    console.log(`Simulation started for ${links.length} link(s)`);
+
+    const interval = setInterval(() => {
+        if (i >= max) {
+            clearInterval(interval);
+            console.log("Simulation finished.");
+            return;
+        }
+
+        // Rotate through links
+        const link = links[i % links.length];
+
+        console.log(`Simulated click #${i + 1} → ${link.href}`);
+
+        if (ENABLE_REAL_CLICKS) {
+            link.click(); // ⚠️ may trigger popup blockers
+        }
+
+        i++;
+    }, delay);
+});
+</script>
+
 </body>
 </html>
 <!-- Updated: Sun Mar  8 12:43:31 UTC 2026 -->
